@@ -81,6 +81,7 @@ rfdata<-classificationsummary(rf.label,testset$Outcome,'mutagen','nonmutagen')
 nb.label<-predict(nb_model,testset)
 nbdata<-classificationsummary(nb.label,testset$Outcome,'mutagen','nonmutagen')
 
+
 svm.label<-predict(svm_model,as.matrix(testset[1:166]))
 svmdata<-classificationsummary(svm.label,testset$Outcome,'mutagen','nonmutagen')
 Methods<- c('Random Forest','Naive Bayes','SVM')
